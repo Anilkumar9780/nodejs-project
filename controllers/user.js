@@ -45,3 +45,43 @@ export const userProfile = async (req, res) => {
         res.status(404).json({ message: "User not found", data: error.message })
     }
 };
+
+export const addProduct = async (req, res) => {
+    const { userId } = req.body;
+    try {
+        const user = await User.findById(userId).select("-password");
+        res.status(200).json({ user: user });
+    } catch (error) {
+        res.status(404).json({ message: "User not found", data: error.message })
+    }
+};
+
+export const editProduct = async (req, res) => {
+    const { userId } = req.body;
+    try {
+        const user = await User.findById(userId).select("-password");
+        res.status(200).json({ user: user });
+    } catch (error) {
+        res.status(404).json({ message: "User not found", data: error.message })
+    }
+};
+
+export const deleteProduct = async (req, res) => {
+    const { userId } = req.body;
+    try {
+        const user = await User.findById(userId).select("-password");
+        res.status(200).json({ user: user });
+    } catch (error) {
+        res.status(404).json({ message: "User not found", data: error.message })
+    }
+};
+
+export const getAllProduct = async (req, res) => {
+    const { userId } = req.body;
+    try {
+        const user = await User.findById(userId).select("-password");
+        res.status(200).json({ user: user });
+    } catch (error) {
+        res.status(404).json({ message: "User not found", data: error.message })
+    }
+};

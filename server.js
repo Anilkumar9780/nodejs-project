@@ -58,6 +58,8 @@ app.get('/', (req, res) => {
 });
 
 // Database connection
+CONNECTION_STRING="mongodb+srv://anilkumar:bL9NBVIBzLam6VO6@cluster0.hozvqhj.mongodb.net/?retryWrites=true&w=majority"
+
 
 // start server(port)
 const PORT = process.env.PORT || 5000;
